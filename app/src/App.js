@@ -7,6 +7,7 @@ import {
   Route
 } from "react-router-dom";
 import Tag from './components/Tag.js'
+import TagCss from './components/TagCss.js'
 
 const App = () => (
   <Router>
@@ -29,8 +30,11 @@ const App = () => (
           </header>
         </div>
       </Route>
-      <Route>
-        <Tag path="/tag" />
+      <Route exact path="/tag">
+        <Tag />
+      </Route>
+      <Route exact path="/tagcss">
+        <TagCss />
       </Route>
     </Switch>
   </Router>

@@ -1,0 +1,31 @@
+.taggroupcss ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.taggroupcss ul li {
+    display: inline-block;
+    margin: 0 .3em .3em 0;
+    padding: 0;
+}
+.taggroupcss ul li a {
+    display: inline-block;
+    max-width: 100px;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 1em;
+    background-color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #333;
+    font-size: 13px;
+    text-decoration: none;
+    transition: .2s;
+}
+.taggroupcss ul li a:hover {
+    background-color: #555;
+    color: #fff;
+}

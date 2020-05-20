@@ -12,6 +12,7 @@ const Tag = () => {
                 <Grid container>
                     <Grid item xs={12} sm={12} md={12} lg={12}>
                         <Box textAlign="center" mt={5}>
+                            <Box mb={1}>makeStyles(CSS in JS)</Box>
                             <div className={classes.taggroup}>
                                 <ul>
                                     <li><a href="#">JavaScript</a></li>
@@ -51,7 +52,6 @@ const tagStyle = makeStyles(() => ({
                     color: "#333",
                     fontSize: "13px",
                     textDecoration: "none",
-                    "-webkit-transition": ".2s",
                     transition: ".2s",
                     "&:hover": {
                         backgroundColor: "#555",
