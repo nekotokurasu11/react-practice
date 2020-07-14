@@ -11,7 +11,7 @@ const App = () => (
   <Router>
     <Switch>
       <Route exact path="/">
-        <div><h1>Hello, world!</h1></div>
+        <h1>Hello, world!</h1>
       </Route>
       <Route exact path="/tag">
         <Tag />
