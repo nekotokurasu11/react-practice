@@ -1,5 +1,4 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 // import {
 //   BrowserRouter as Router,
 //   Switch,
@@ -8,32 +7,36 @@ import PropTypes from 'prop-types';
 // import Tag from './components/Tag.js'
 // import TagCss from './components/TagCss.js'
 
-const App = () => {
-// userの情報をまとめる
-const profiles =[
-  {name : "Taro", age : 10},
-  {name : "Hanako", age : 5},
-  {name : "NonName" }
-]
-  return (
-    <div>
-      {
-        profiles.map((profile, index) => {
-          return <User name={profile.name} age={profile.age} key={index}/>
-        })
-      }
-    </div>
-  )
+const App = () => (<Counter></Counter>)
+
+class Counter extends Component {
+  constructor(props) {
+    super(props)
+    this.state = { count: 0 }
+  }
+handePlusButton = () => {
+  // だめです Do not mutate state directly. Use setState()
+  // this.state = {count: this.state.count + 1}
+  this.setState({count: this.state.count + 1})
 }
 
-const User = (props) => {
-  return <div>Hi, I am {props.name}, and {props.age} years old!</div>
+handeMinusButton = () => {
+  this.setState({count: this.state.count - 1})
 }
 
-User.propTypes = {
-  name : PropTypes.string,
-  age : PropTypes.number.isRequired
+  render() {
+    // なぜか二回出てくる…
+    console.log("render")
+    return (
+      <React.Fragment>
+        <div>count {this.state.count}</div>
+        <button onClick={this.handePlusButton}>+1</button>
+        <button onClick={this.handeMinusButton}>-1</button>
+      </React.Fragment>
+    )
+  }
 }
+
 
 
 // class App extends Component {
